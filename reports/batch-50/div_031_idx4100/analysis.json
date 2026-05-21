@@ -1,0 +1,13 @@
+{
+  "has_defect": false,
+  "overall_assessment": "스크류 (Fastener) 표본 — 외관 검사상 특이 결함 없음",
+  "overall_severity": "NONE",
+  "confidence": 0.85,
+  "defects": [],
+  "inspection_notes": "스크류 (Fastener) 외관 검사 결과 결함 없음. 표면 균일도·치수·색상 모두 양호한 정상 표본으로 판단됨. 표본 다양성 검증의 음성 케이스(negative control)로 활용 가능. 비고: 정상.",
+  "recommended_actions": [
+    "동일 로트 정상 표본 데이터베이스에 추가 (학습용)",
+    "주기적 SPC 모니터링 유지",
+    "외관 외 기능 시험(필요 시) 병행"
+  ]
+}

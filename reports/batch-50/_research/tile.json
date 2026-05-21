@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "성형(pressing) 압력 불균일, 유약(glaze) 도포 두께 산포로 표면 결함. 소성(firing) 온도 프로파일 이상 시 균열(crazing)·변색 발생."},
+    {"category": "설비 요인", "details": "프레스 다이 마모로 가장자리 chip. 가마(kiln) 내 위치별 온도 편차. 유약 분사 노즐 막힘으로 얼룩."},
+    {"category": "재료 요인", "details": "점토 배합 비율 산포로 수축률 차이 → 균열. 유약 슬러리 농도 변화로 광택·색조 변동. 안료 분산 불균일."},
+    {"category": "환경 요인", "details": "건조실 습도 관리 실패 시 균열 위험. 포장·운반 중 충격으로 chip·crack 발생."}
+  ],
+  "industry_standards": [
+    "ISO 10545-2 — 세라믹 타일 표면 품질 측정",
+    "ANSI A137.1 — Standards for Ceramic Tile (북미)",
+    "ISO 13006 — 세라믹 타일 분류 및 사양",
+    "EN 14411 — 유럽 세라믹 타일 표준",
+    "검사 조명 표준: 300 lux, 1m 거리, 수직 배치"
+  ],
+  "similar_cases": [
+    "MVTec AD tile 카테고리: crack, glue_strip, gray_stroke, oil, rough 결함",
+    "Crazing(미세 균열) — 소성 후 급랭으로 인한 대표적 제조 결함",
+    "Color spot — 안료 분산 불량으로 인한 얼룩, 자동 비전으로 검출 가능"
+  ],
+  "best_practices": [
+    "100% AOI 검사 라인 (조명 표준화: 300 lux 균일 조명)",
+    "소성 가마 위치별 온도 프로파일 정기 캘리브레이션",
+    "유약 슬러리 점도·농도 실시간 모니터링",
+    "출하 직전 샘플링 균열 시험 (열충격)"
+  ],
+  "improvement_recommendations": [
+    "AOI 시스템에 딥러닝 기반 색상·구조 결함 분류기 도입",
+    "프레스 다이 마모 자동 측정 시스템",
+    "안료 분산 공정에 in-line 색차계 설치",
+    "포장 자동화 + 완충재 강화로 운반 손상 ↓"
+  ],
+  "_queries": ["ceramic tile manufacturing defect inspection crack stain industrial standard"],
+  "_sources": [
+    "https://www.process.st/templates/ceramic-tile-quality-control-checklist/",
+    "https://tcnatile.com/wp-content/uploads/2022/08/Examination-of-Tile-for-Defects.pdf",
+    "https://www.sciencedirect.com/science/article/abs/pii/S027288422201803X",
+    "https://arxiv.org/pdf/0906.3770"
+  ]
+}

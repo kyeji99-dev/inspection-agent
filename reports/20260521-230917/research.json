@@ -1,0 +1,64 @@
+{
+  "root_cause_analysis": [
+    {
+      "category": "공정 요인",
+      "details": "자동 삽입(auto-insertion) 공정에서 과도한 굽힘 각도로 인한 누적 변형이 가장 흔한 원인. 리드 포밍 다이의 압력·각도 설정 오류, 본체 부착부 클램프 미흡 시 본체-굽힘점 사이 인장 응력이 해소되지 못하고 리드 변형 발생."
+    },
+    {
+      "category": "설비 요인",
+      "details": "포밍 다이의 마모 및 도금 잔류물 축적으로 정밀도가 저하되면 리드 평행도와 좌우 대칭성이 무너짐. 픽앤플레이스 노즐의 진공압·그리퍼 압력이 표준치를 초과해도 운반 중 변형이 누적됨."
+    },
+    {
+      "category": "재료 요인",
+      "details": "리드 프레임 자체의 열처리 편차나 도금층 두께 불균일로 인해 굽힘 강성이 일관되지 않으면 동일 공정 조건에서도 변형률이 산포됨. 특정 로트 단위 결함률 급증 시 1순위 의심 항목."
+    },
+    {
+      "category": "환경 요인",
+      "details": "운반·보관 트레이 적재 단수 과다, 완충재 부족, 진동·낙하 등 외력 누적으로 인한 변형이 가능. 테이프 앤 릴 권취 텐션도 영향. 입고 검사 시 트레이별 샘플링으로 외부 인입 결함 식별 권장."
+    }
+  ],
+  "industry_standards": [
+    "IPC-A-610 (Acceptability of Electronic Assemblies) — 리드 굽힘·정렬·코플래너리티 합부 기준 정의. Class 1/2/3 단계별 차등 적용",
+    "IPC J-STD-001 (Requirements for Soldered Electrical and Electronic Assemblies) — 솔더링 전 리드 형상 요구사항 규정",
+    "JEDEC JESD22 — 리드 정합성 및 기계적 응력 시험 규격",
+    "JEITA EIAJ ED-7306 — 반도체 패키지 리드 굽힘·평행도 측정 표준",
+    "Taiwan Semiconductor AN-1005 — TO-220 패키지 마운팅·벤딩 작업 지침 (벤더 기술 문서)",
+    "ISO 9001 / IATF 16949 — 공정 변동 관리 및 측정 시스템 분석(MSA) 요구"
+  ],
+  "similar_cases": [
+    "MVTec AD 벤치마크 데이터셋의 transistor/bent_lead 카테고리에 본 결함과 동일 유형의 사례 다수 수록 (학술 표준 케이스)",
+    "PCB 자동삽입 공정에서 과도 굽힘 각도로 인한 인접 회로 단락 사례 — 솔더 조인트와 트레이스 간 최소 2mm 이격 미준수가 원인",
+    "TO-220 surface-mount 변형 시 본체-굽힘점 클램프 부족으로 인한 본체 미세 균열 동반 사례 (USPTO 6,291,262 특허 배경기술)",
+    "오토인서션 후 open/short 테스트로만 검출 가능한 wire bond 손상 — 외관 검사로는 누락 가능성"
+  ],
+  "best_practices": [
+    "리드 포밍 시 본체와 굽힘점 사이를 견고히 클램프하여 인장 응력 차단",
+    "포밍 후 100% Open/Short 자동 테스트 적용 (외관 검사로 검출 불가한 와이어 본드 손상 대응)",
+    "포밍 다이 마모도 정기 점검 (도금 잔류물 제거 주기 단축)",
+    "트레이 적재 단수 표준화 + 진동·낙하 시험 통과 패키징 적용",
+    "AOI(Automated Optical Inspection) + 3D 리드 코플래너리티 측정 병행"
+  ],
+  "improvement_recommendations": [
+    "리드 포밍 공정 파라미터(압력·각도·클램프 토크) 즉시 캘리브레이션 및 SPC 관리도 도입",
+    "동일 로트 100개 샘플 확대 검사로 결함률 산출 → 0.5% 초과 시 전수검사 전환",
+    "포밍 후 자동 코플래너리티 측정 장비 도입 검토 (수동 검사 한계 보완)",
+    "공급사 입고 시 리드 프레임 도금·열처리 인증서 수령 의무화",
+    "포장·운반 트레이 재설계 (적재 단수 ↓, 완충재 강화)"
+  ],
+  "_queries": [
+    "TO-220 transistor bent lead defect manufacturing root cause inspection",
+    "IPC-A-610 transistor lead deformation acceptance criteria standard",
+    "lead forming process defect prevention semiconductor TO-220 package",
+    "MVTec anomaly detection transistor bent lead defect classification"
+  ],
+  "_sources": [
+    "https://www.ic-components.com/blog/IPC-A-610-Standard-for-Electronic-Assembly-Quality.jsp",
+    "https://eureka.patsnap.com/article/ipc-a-610-explained-the-gold-standard-for-pcb-assembly-inspection",
+    "https://services.taiwansemi.com/storage/resources/application-note-17/AN-1005_Mounting%20and%20bending%20instructions%20for%20TO220%20package_B2111.pdf",
+    "https://fumaxtech.com/common-defect-causes-in-pcb-manufacturing-root-cause-analysis/",
+    "https://www.eprotos.com/pcb-blog/common-defects-in-pcb-assembly/",
+    "https://www.mvtec.com/company/research/datasets/mvtec-ad",
+    "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6291262",
+    "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/5585281"
+  ]
+}

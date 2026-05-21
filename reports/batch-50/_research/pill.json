@@ -1,0 +1,40 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "타정(tableting) 공정의 압력 변동, 코팅 분사 불균일로 인한 표면 얼룩·반점. 식별 인쇄(엠보싱·잉크) 정렬 오류로 인쇄 결함 발생."},
+    {"category": "설비 요인", "details": "타정기 펀치·다이 마모로 가장자리 결손(chip). 코팅 팬 회전속도·온도 산포. 인쇄 롤러 잉크 부족 또는 노즐 막힘."},
+    {"category": "재료 요인", "details": "원료 분말 입도 분포 산포로 압축 강도 변동. 색소 분산 불균일로 표면 변색·반점. 코팅액 점도 변화."},
+    {"category": "환경 요인", "details": "제조실 습도 관리 실패 시 흡습으로 인한 변형·변색. 저장 중 빛 노출로 활성 성분 분해 가능."}
+  ],
+  "industry_standards": [
+    "USP <1216> Tablet Friability — 마모 시험",
+    "USP <701> Disintegration — 붕해 시험",
+    "FDA 21 CFR Part 211 — Current Good Manufacturing Practice (cGMP)",
+    "ICH Q7 / Q9 / Q10 — 의약품 품질 가이드라인",
+    "FDA Draft Guidance on AI for Drug Manufacturing (2025-01)"
+  ],
+  "similar_cases": [
+    "MVTec AD pill 카테고리: scratch, contamination, print 결함 유형 수록",
+    "타정 펀치 마모로 인한 가장자리 chip 사례 다수 (특히 deep convex 형상)",
+    "코팅 spray 노즐 막힘 → 한 면 얼룩 → 자동 비전 검사로 검출",
+    "잉크 인쇄 결함('FT' vs 'FF') 사례: 식약처 회수 사유 다수"
+  ],
+  "best_practices": [
+    "타정 압력 SPC 관리 (실시간 force feedback)",
+    "코팅 후 100% AOI(Automated Optical Inspection) 자동 비전 검사",
+    "인쇄 결함은 OCR 기반 알고리즘으로 글자 단위 검증",
+    "원료 입도 분포 LIS(라이브 in-line) 모니터링"
+  ],
+  "improvement_recommendations": [
+    "AOI 라인에 딥러닝 결함 분류 모델 도입 (cGMP 검증 완료 모델 사용)",
+    "타정기 펀치 마모도 자동 측정 (교체 주기 데이터화)",
+    "코팅 노즐 청소 주기 단축 + 노즐 압력 센서",
+    "인쇄 정렬 보정용 비전 가이드 시스템"
+  ],
+  "_queries": ["pharmaceutical tablet pill defect inspection print spots discoloration FDA"],
+  "_sources": [
+    "https://www.cognex.com/en/applications/automated-defect-detection/pharmaceutical-product-inspection/pharmaceutical-tablet-and-capsule-inspection",
+    "https://intuitionlabs.ai/articles/computer-vision-in-pharmaceutical-quality-control",
+    "https://www.overview.ai/blog/tablet-defects-manufacturing/",
+    "https://www.pharmtech.com/view/black-specks-tablet-stability-samples"
+  ]
+}

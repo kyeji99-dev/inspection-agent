@@ -1,0 +1,33 @@
+{
+  "has_defect": true,
+  "overall_assessment": "칫솔 — 심한 오염 / 사용흔 (bristle) 결함 검출",
+  "overall_severity": "HIGH",
+  "confidence": 0.82,
+  "defects": [
+    {
+      "type": "심한 오염 / 사용흔 (bristle)",
+      "type_en": "심한 오염 / 사용흔 (bristle)",
+      "location_desc": "bristle 전체 영역",
+      "bbox_normalized": [
+        0.18,
+        0.1,
+        0.82,
+        0.85
+      ],
+      "size_estimate": "중간",
+      "description": "bristle 전체 영역에 심한 오염 / 사용흔 (bristle) 결함 관찰. 황색·갈색 오염 다수 — 사용 흔적 추정",
+      "severity": "HIGH",
+      "possible_causes": [
+        "공정 파라미터 산포 (1순위)",
+        "원재/공급 측 변동",
+        "환경/취급 외력"
+      ]
+    }
+  ],
+  "inspection_notes": "칫솔 표본에서 심한 오염 / 사용흔 (bristle) 결함이 관찰됨 (HIGH). 동일 로트 확대 샘플링과 해당 공정 단계 점검 권고. 자세한 산업 표준·근본 원인은 '근본 원인 분석' 및 '참고 자료' 슬라이드 참조.",
+  "recommended_actions": [
+    "심한 오염 / 사용흔 (bristle) 검출 표본 즉시 격리 + 재검사",
+    "동일 로트 100개 샘플 확대 검사로 결함률 산출",
+    "공정 파라미터 점검 (research 권고 항목 참조)"
+  ]
+}

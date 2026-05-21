@@ -1,55 +1,98 @@
 # Vision Inspection Agent — 실행 가이드
 
-## 1. 환경 설정 (5분)
+Codex(또는 호환 AI 에이전트) 세션 안에서 **직접** 동작하는 AI 비전 검사 도구.
+별도 API 키·서버 없이 슬래시 커맨드 한 줄로 결함 분석 → 웹 리서치 → PPT 보고서 생성.
 
-```bash
-# 가상환경 생성
-python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+## 1. 환경 설정 (3분)
 
-# 의존성 설치
+Windows PowerShell:
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-## 2. API 키 발급
+설치되는 패키지: `python-pptx`, `Pillow` (그 외 의존성 없음, **API 키 불필요**).
 
-1. https://console.anthropic.com 가입
-2. Billing 메뉴에서 $10 정도 충전 (개인 카드, 데모 1회당 약 $0.5~2)
-3. API Keys 메뉴에서 키 발급 (`sk-ant-...`)
+## 2. 실행 — `/inspect` 슬래시 커맨드
 
-## 3. 실행
+### 2-1. Codex에 슬래시 커맨드 등록
 
-```bash
-streamlit run app.py
+이 프로젝트는 `.codex/prompts/inspect.md` 에 슬래시 커맨드를 정의해두었습니다.
+
+**프로젝트 단위 prompt를 자동 인식하는 Codex 버전이라면** 별도 작업 없이 바로 사용 가능합니다.
+인식이 안 되면 사용자 홈 폴더로 복사:
+
+```powershell
+# Windows
+mkdir $HOME\.codex\prompts -Force
+Copy-Item .codex\prompts\inspect.md $HOME\.codex\prompts\inspect.md
 ```
 
-브라우저가 자동으로 열립니다 (http://localhost:8501)
+```bash
+# macOS / Linux
+mkdir -p ~/.codex/prompts
+cp .codex/prompts/inspect.md ~/.codex/prompts/inspect.md
+```
 
-## 4. 사용 흐름
+### 2-2. 사용
 
-1. 사이드바에 API 키 입력
-2. 사이드바에서 제품 종류·검사 항목 설정
-3. 이미지 업로드 (MVTec AD 등 공개 데이터셋)
-4. "검사 시작" 클릭
-5. 3단계 진행 상황 확인 (비전 분석 → 웹 리서치 → PPT 생성)
-6. 결과 확인 후 PPT 다운로드
+1. 프로젝트 폴더(`C:\inspection-agent`)에서 Codex 열기 (또는 `cd` 해서 세션 시작)
+2. 분석할 이미지를 폴더 안에 두기 (예: `images/pcb_01.png`)
+3. 슬래시 커맨드 입력:
+
+```
+/inspect images/pcb_01.png
+```
+
+옵션 인자:
+```
+/inspect images/pcb_01.png product=PCB focus="스크래치, 균열"
+/inspect images/leather.jpg product=가죽 focus="변색, 오염"
+```
+
+기본값: `product=PCB`, `focus=표면 결함, 오염, 스크래치, 균열`
+
+## 3. 동작 흐름
+
+`/inspect` 한 줄을 입력하면 Codex 에이전트가:
+
+1. **이미지 분석** — 결함 검출, 위치(bbox), 심각도, 추정 원인 → `analysis.json`
+2. **웹 리서치** — 결함 유형 기반 산업 표준·근본 원인 자동 검색 → `research.json`
+3. **PPT 렌더링** — `render_report.py` 호출 → 6슬라이드 임원 보고서 생성
+
+소요 시간: 약 30초 ~ 2분 (검색 호출 수에 따라)
+
+## 4. 결과물
+
+`reports/<YYYYMMDD-HHMMSS>/` 폴더에 모두 모입니다:
+
+| 파일 | 설명 |
+|---|---|
+| `input.<ext>` | 원본 이미지 (복사본) |
+| `annotated.png` | AI 검출 결함 영역 표시 이미지 |
+| `analysis.json` | 비전 분석 원시 데이터 |
+| `research.json` | 웹 리서치 원시 데이터 |
+| `검사보고서.pptx` | 6슬라이드 보고서 (표지 / 요약 / 결함 상세 / 근본 원인 / 권고 / 출처) |
+
+PPT 빠르게 열기:
+```powershell
+Start-Process reports\<폴더이름>\검사보고서.pptx
+```
 
 ## 5. 데모 데이터 받기 (3분)
 
-### MVTec AD (학술·연구용 무료)
+### MVTec AD (학술·연구 용도 무료)
 - https://www.mvtec.com/company/research/datasets/mvtec-ad
-- 15개 카테고리 (병, 케이블, 캡슐, 카펫, 그리드, 가죽 등)
+- 15개 카테고리: 병, 케이블, 캡슐, 카펫, 그리드, 가죽, 너트, 알약, 스크류, 타일, 칫솔, 트랜지스터, 우드, 지퍼, 메탈 너트
 - 각 카테고리별 정상/결함 이미지 수백 장
 
 ### Hugging Face에서 빠르게 받기
 ```python
-# Python으로 일부만 다운로드
 from datasets import load_dataset
 ds = load_dataset("Voxel51/mvtec-ad", split="train[:50]")
 ```
-
-또는 그냥 Hugging Face 페이지에서 샘플 이미지 다운로드:
-- https://huggingface.co/datasets/Voxel51/mvtec-ad
+또는 페이지에서 직접 다운로드: https://huggingface.co/datasets/Voxel51/mvtec-ad
 
 ### 그 외 추천 공개 데이터셋
 - KolektorSDD: 전자 부품 결함
@@ -60,9 +103,9 @@ ds = load_dataset("Voxel51/mvtec-ad", split="train[:50]")
 
 ### 시연 직전 준비
 - [ ] 결함이 명확한 MVTec 이미지 3~5장 미리 골라두기 (스크래치/오염/균열 각각)
-- [ ] 미리 한 번 돌려서 결과 확인 (Claude가 응답 안 할 케이스 제거)
-- [ ] 사이드바 product_type을 이미지에 맞게 미리 설정
-- [ ] 한 번 PPT 생성 미리 해두고 백업
+- [ ] 미리 한 번 `/inspect`로 돌려서 결과 PPT 확인 (응답 품질이 약한 케이스 제거)
+- [ ] 시연용 이미지 폴더 정리 (`images/demo/`)
+- [ ] 백업 PPT 한 부 미리 생성해두기
 
 ### 시연 멘트 예시
 ```
@@ -71,9 +114,9 @@ ds = load_dataset("Voxel51/mvtec-ad", split="train[:50]")
 저희 검사 업무에 즉시 활용 가능합니다.
 
 지금 보시는 이미지는 산업 결함 공개 데이터셋(MVTec)의
-○○ 결함입니다. 검사 시작 누르면..."
+○○ 결함입니다. 슬래시 커맨드 한 줄만 입력하면..."
 
-[검사 시작 클릭]
+[/inspect images/demo/pcb_01.png 입력]
 
 "보시는 것처럼 Claude가
 1) 먼저 이미지를 정밀 분석해 결함 위치를 잡고
@@ -81,9 +124,9 @@ ds = load_dataset("Voxel51/mvtec-ad", split="train[:50]")
 3) 마지막으로 임원 보고용 PPT를 자동 생성합니다.
 
 이게 평소에 검사관 한 명이 30분~1시간 걸리는 작업입니다.
-30초 만에 끝납니다."
+30초~1분 만에 끝납니다."
 
-[PPT 다운로드 → 슬라이드 보여주기]
+[reports 폴더에서 PPT 열기 → 슬라이드 보여주기]
 
 "보안 이슈가 있는 사내 데이터는 폐쇄망 환경에 같은 워크플로우를
 배포하면 됩니다. Claude는 SaaS 외에 AWS Bedrock, GCP Vertex,
@@ -97,27 +140,35 @@ ds = load_dataset("Voxel51/mvtec-ad", split="train[:50]")
 
 ## 7. 트러블슈팅
 
-### "JSON 형식을 찾을 수 없습니다" 에러
-- Claude가 가끔 JSON을 안 감싸고 출력. 같은 이미지로 한 번 더 시도.
-- 또는 model을 Opus로 변경 (더 안정적)
+### `/inspect`가 인식 안 됨
+- 프로젝트 루트(`C:\inspection-agent`)에서 Codex 세션을 열었는지 확인
+- `.codex/prompts/inspect.md` 파일 존재 확인
+- Codex가 프로젝트 단위 prompt를 자동 인식 못하면 `~/.codex/prompts/` 로 복사 (위 2-1 참조)
+- Codex 세션 재시작하면 슬래시 커맨드가 재로딩됩니다
 
 ### bbox가 부정확
-- Vision 모델의 bbox는 추정치라 100% 정확하지 않음
-- 정성적 위치 설명(location_desc)이 더 안정적
-- 데모용으로는 큰 결함이 있는 이미지를 선택
+- Vision 분석의 bbox는 추정치 — 100% 정확하지 않음
+- 정성적 위치 설명(`location_desc`)이 더 안정적
+- 데모용으로는 결함이 크고 명확한 이미지를 선택
 
-### 검사 결과가 약함
-- product_type을 더 구체적으로 (예: "PCB" → "산업용 PCB 솔더링 표면")
-- inspection_focus를 명확히 (예: "솔더링 결함, 단선, 단락")
+### 검사 결과가 약함 / 추상적임
+- `product` 인자를 더 구체적으로 (예: `product=PCB` → `product="산업용 PCB 솔더링 표면"`)
+- `focus` 인자를 명확히 (예: `focus="솔더링 결함, 단선, 단락"`)
+- 같은 이미지로 한 번 더 돌리면 다른 각도의 분석이 나올 수도 있음
 
-### API 비용 절약
-- 데모 준비 시에는 sonnet으로 (3~5배 저렴)
-- 실제 시연 때만 opus
+### `render_report.py` 실행 시 에러
+- venv 활성화 상태인지 확인 (`(.venv)` 프롬프트)
+- `pip install -r requirements.txt` 다시 실행
+- `analysis.json` / `research.json`이 유효한 JSON인지 확인
+
+### 웹 검색 결과가 빈약함
+- 결함 유형이 너무 일반적이면(예: 그냥 "결함") 검색어가 약해짐
+- `focus` 인자에 구체 키워드를 넣으면 검색 품질이 올라감
 
 ## 8. 개선 아이디어 (시간 남으면)
 
-- [ ] 여러 이미지 일괄 검사 모드
+- [ ] 여러 이미지 일괄 검사 모드 (`/inspect-batch images/*.png`)
 - [ ] 검사 통계 대시보드 (결함 유형별 분포)
 - [ ] PPT 디자인을 회사 템플릿으로 변경
-- [ ] 음성 입력으로 검사 항목 설정
+- [ ] 이전 검사 결과와의 시계열 비교
 - [ ] 슬랙/이메일로 보고서 자동 발송

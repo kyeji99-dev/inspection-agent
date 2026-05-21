@@ -1,0 +1,40 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "capsule filling 공정의 분말 흐름성 부족으로 fill weight 산포(under/over). cap-body 결합(joining) 부정확으로 telescoping 또는 open cap."},
+    {"category": "설비 요인", "details": "filling 머신의 dosator 마모로 weight 산포. 인쇄 롤러 잉크 농도 변동으로 print 결함."},
+    {"category": "재료 요인", "details": "gelatin/HPMC shell의 두께·습도 산포로 dent·crush. 색소 분산 불균일로 shade variation."},
+    {"category": "환경 요인", "details": "고온·고습 노출 시 shell 변형·녹음. 정전기로 분말 부착 → fill weight 오차."}
+  ],
+  "industry_standards": [
+    "USP <711> Dissolution — 용출 시험",
+    "USP <905> Uniformity of Dosage Units — 함량 균일성",
+    "FDA 21 CFR Part 211 — cGMP",
+    "ICH Q7/Q9/Q10 — 의약품 품질",
+    "AQL 분류: Critical(중량·이물), Major(telescopic·denting), Minor(색차·인쇄 약함)"
+  ],
+  "similar_cases": [
+    "MVTec AD capsule 카테고리: crack, faulty_imprint, poke, scratch, squeeze 결함",
+    "Fill weight under-fill → 함량 부족 → 회수 사례 (FDA 483 Warning Letter)",
+    "Telescoping(cap-body 어긋남) → 분말 누출 → 라인 정지",
+    "Wrong printing → 의약품 식별 오류 → 환자 안전 위협"
+  ],
+  "best_practices": [
+    "100% AOI 검사 — color/print/shape/dimension 동시 검증",
+    "Check weigher로 fill weight 100% 측정 (USP 기준)",
+    "OCR로 인쇄 글자 단위 검증",
+    "filling 라인에 dosator 마모도 정기 점검"
+  ],
+  "improvement_recommendations": [
+    "AOI 시스템에 딥러닝 결함 분류기 (faulty_imprint, telescoping, color spot)",
+    "Real-time 분말 흐름성 모니터링 + 자동 보정",
+    "Shell 입고 시 두께·수분 인증서 의무화",
+    "환경실 온습도 자동 제어 강화"
+  ],
+  "_queries": ["pharmaceutical capsule inspection defect color print fill weight standard"],
+  "_sources": [
+    "https://sedpharma.com/news-events/how-does-a-capsule-inspection-system-work/",
+    "https://www.pharmaguideline.com/2014/06/sop-for-acceptable-quality-level-aql.html",
+    "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/4143770",
+    "https://www.cognex.com/en/applications/automated-defect-detection/pharmaceutical-product-inspection/pharmaceutical-tablet-and-capsule-inspection"
+  ]
+}

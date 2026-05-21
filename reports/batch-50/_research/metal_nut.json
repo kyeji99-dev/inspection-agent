@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "프레스 성형(cold heading) 또는 절삭 공정의 공구 마모로 표면 거칠기·버 발생. 도금 전 세척 불량으로 잔류물이 표면 결함을 유발."},
+    {"category": "설비 요인", "details": "프레스 다이의 윤활 부족, 자동 이송 컨베이어의 모서리 충돌로 인한 스크래치. 도금조 거동 불균일로 코팅 두께 산포."},
+    {"category": "재료 요인", "details": "원재(steel rod) 표면 산화·녹·이물 → 후공정에서 결함으로 노출. 강재 강도 산포로 성형 균열."},
+    {"category": "환경 요인", "details": "운반·보관 중 다발성 마찰로 미세 스크래치 누적. 습도 관리 실패 시 도금층 변색·녹."}
+  ],
+  "industry_standards": [
+    "ASTM A480 — 강재 표면 스크래치 최대 허용 깊이",
+    "ISO 4287 — 표면 거칠기 파라미터 (Ra, Rz 등)",
+    "ASTM B117 / ISO 9227 — 염수분무시험 (도금 내식성, 48~168시간)",
+    "ISO 2859-1 — AQL 샘플링 검사 (Critical/Major/Minor)",
+    "ISO 898-1 — 강도등급 분류"
+  ],
+  "similar_cases": [
+    "MVTec AD metal_nut 카테고리: scratch/color/bent 결함 유형 수록",
+    "T-nut 표면 스크래치는 후속 도금 공정에서 핀홀·박리로 확산되는 사례 다수",
+    "냉간단조 시 다이 마모로 균일하지 않은 표면 패턴 발생"
+  ],
+  "best_practices": [
+    "프레스 다이 마모도 일일 점검 + 윤활제 자동 도포 시스템",
+    "도금 전 초음파 세척 + 산세 표준화",
+    "비전 검사 시스템(머신비전)으로 표면 결함 자동 분류 (BSI/딥러닝 모델)",
+    "염수분무시험 정기 샘플링 (로트당 5개)"
+  ],
+  "improvement_recommendations": [
+    "스크래치 깊이 한계치 SOP 명문화 (예: 5mm 이상 = Major)",
+    "프레스 공구 교체 주기 단축 (현행 대비 -20%)",
+    "도금조 자동 농도·온도 제어 시스템 도입",
+    "운반 트레이에 완충 라이너 추가"
+  ],
+  "_queries": ["metal nut T-nut manufacturing defect inspection surface scratch standard"],
+  "_sources": [
+    "https://www.xinchi-industry.com/news/t-nut-manufacturing-strength-quality-inspection-procedures/",
+    "https://metalzenith.com/blogs/defects-inspection-testing-terms/friction-gouges-or-scratches-in-steel-detection-causes-quality-impact",
+    "https://www.mdmetals.com/2025/05/18/diagnosing-steel-surface-defects/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9784605/"
+  ]
+}

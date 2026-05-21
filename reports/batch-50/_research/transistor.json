@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "리드 포밍(lead forming) 다이의 압력·각도 설정 오류, 자동 삽입(auto-insertion) 시 과도한 굽힘 누적이 가장 흔한 원인. 본체-굽힘점 클램프 부족 시 인장 응력 해소 실패."},
+    {"category": "설비 요인", "details": "포밍 다이 마모 및 도금 잔류물 축적으로 정밀도 저하. 픽앤플레이스 노즐 진공압·그리퍼 압력 과다 시 운반 중 변형 누적."},
+    {"category": "재료 요인", "details": "리드 프레임 열처리 편차, 도금층 두께 불균일로 굽힘 강성이 일관되지 않음. 로트 단위 결함률 급증 시 1순위 의심."},
+    {"category": "환경 요인", "details": "트레이 적재 단수 과다, 완충재 부족, 진동·낙하 등 외력 누적. 테이프 앤 릴 권취 텐션도 영향."}
+  ],
+  "industry_standards": [
+    "IPC-A-610 (Acceptability of Electronic Assemblies) — 리드 굽힘·정렬·코플래너리티 합부 기준",
+    "IPC J-STD-001 — 솔더링 전 리드 형상 요구사항",
+    "JEDEC JESD22 — 리드 정합성 및 기계적 응력 시험",
+    "JEITA EIAJ ED-7306 — 반도체 패키지 리드 굽힘·평행도 측정",
+    "Taiwan Semiconductor AN-1005 — TO-220 마운팅·벤딩 작업 지침"
+  ],
+  "similar_cases": [
+    "MVTec AD 벤치마크 transistor/bent_lead 카테고리에 유사 사례 다수 수록",
+    "자동삽입 공정 과도 굽힘으로 인한 인접 회로 단락 사례 (트레이스 간 2mm 이격 미준수)",
+    "TO-220 SMT 변형 시 본체 클램프 부족으로 본체 미세 균열 동반"
+  ],
+  "best_practices": [
+    "리드 포밍 시 본체-굽힘점 견고히 클램프하여 인장 응력 차단",
+    "포밍 후 100% Open/Short 자동 테스트 (와이어 본드 손상 검출)",
+    "포밍 다이 마모도 정기 점검 + 도금 잔류물 제거 주기 단축",
+    "트레이 적재 단수 표준화 + 진동·낙하 시험 패키징"
+  ],
+  "improvement_recommendations": [
+    "리드 포밍 파라미터(압력·각도·클램프 토크) 캘리브레이션 및 SPC 관리도 도입",
+    "포밍 후 자동 코플래너리티 측정 장비 도입",
+    "공급사 입고 시 리드프레임 도금·열처리 인증서 의무화",
+    "포장·운반 트레이 재설계 (적재 단수 ↓, 완충재 강화)"
+  ],
+  "_queries": ["TO-220 transistor bent lead defect manufacturing root cause"],
+  "_sources": [
+    "https://www.ic-components.com/blog/IPC-A-610-Standard-for-Electronic-Assembly-Quality.jsp",
+    "https://services.taiwansemi.com/storage/resources/application-note-17/AN-1005_Mounting%20and%20bending%20instructions%20for%20TO220%20package_B2111.pdf",
+    "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/6291262",
+    "https://www.mvtec.com/company/research/datasets/mvtec-ad"
+  ]
+}

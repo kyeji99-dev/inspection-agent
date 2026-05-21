@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "직조(weaving) 공정의 셔틀 동작 불량으로 broken weft(끊긴 가로실), double pick(이중 위입). 정련·염색 공정의 농도 산포로 색차."},
+    {"category": "설비 요인", "details": "직조기 텐션 균일도 부족으로 nep(매듭), float(부유사). 염색조 순환 불균일로 색반점."},
+    {"category": "재료 요인", "details": "원사 강도 산포로 broken end(끊긴 세로실). 염료 분산 불균일로 stain(얼룩)·shade variation."},
+    {"category": "환경 요인", "details": "고온·고습 환경에서 정전기로 인한 실 흐트러짐. 운반 중 외력으로 hole·crease."}
+  ],
+  "industry_standards": [
+    "ASTM D3990-12 — 직물 결함 용어 표준",
+    "ASTM D2367-65 — 직물 결함 정의",
+    "ISO 2859-1 — AQL 샘플링",
+    "Four-Point System — 결함 길이별 penalty point (3in 이하 1점 ~ 9in 초과 4점)",
+    "ISO 9001 — 품질 경영 (전반)"
+  ],
+  "similar_cases": [
+    "MVTec AD carpet 카테고리: color, cut, hole, metal_contamination, thread 결함",
+    "Stain(얼룩)은 염색 균일도 실패 → 전 lot 재염색 사례 다수",
+    "Broken end/weft — 직조기 텐션 센서 부재 시 흔히 발생"
+  ],
+  "best_practices": [
+    "On-loom inspection (직조 중 실시간 결함 검출)",
+    "AOI + 광학 4-point system 자동 산정",
+    "tilted light board (경사 광원)으로 hanging thread 검출",
+    "염색 후 색차계로 색좌표 정량 평가"
+  ],
+  "improvement_recommendations": [
+    "직조기에 결함 자동 검출 카메라 설치 (broken weft 검출)",
+    "원사 입고 시 강도 균일도 인증서 수령",
+    "염색 공정 SPC 적용 + 색차 기준 강화",
+    "고객 클레임 데이터로 결함 우선순위 재정의"
+  ],
+  "_queries": ["carpet textile defect inspection thread cut color stain weaving standard"],
+  "_sources": [
+    "https://www.intouch-quality.com/blog/5-common-fabric-defects-prevent",
+    "https://www.testextextile.com/application-of-artificial-intelligence-in-textile-defect-detection/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9571054/",
+    "https://www.onlineclothingstudy.com/2019/02/classification-of-fabric-defects.html"
+  ]
+}

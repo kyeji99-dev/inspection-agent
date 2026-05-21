@@ -1,0 +1,33 @@
+{
+  "has_defect": true,
+  "overall_assessment": "카펫 (직물) — 검은 실 / cut 결함 검출",
+  "overall_severity": "HIGH",
+  "confidence": 0.82,
+  "defects": [
+    {
+      "type": "검은 실 / cut",
+      "type_en": "검은 실 / cut",
+      "location_desc": "좌측 수직선",
+      "bbox_normalized": [
+        0.08,
+        0.05,
+        0.3,
+        0.95
+      ],
+      "size_estimate": "중간",
+      "description": "좌측 수직선에 검은 실 / cut 결함 관찰. 검은 이물 실 또는 weft 결함",
+      "severity": "HIGH",
+      "possible_causes": [
+        "공정 파라미터 산포 (1순위)",
+        "원재/공급 측 변동",
+        "환경/취급 외력"
+      ]
+    }
+  ],
+  "inspection_notes": "카펫 (직물) 표본에서 검은 실 / cut 결함이 관찰됨 (HIGH). 동일 로트 확대 샘플링과 해당 공정 단계 점검 권고. 자세한 산업 표준·근본 원인은 '근본 원인 분석' 및 '참고 자료' 슬라이드 참조.",
+  "recommended_actions": [
+    "검은 실 / cut 검출 표본 즉시 격리 + 재검사",
+    "동일 로트 100개 샘플 확대 검사로 결함률 산출",
+    "공정 파라미터 점검 (research 권고 항목 참조)"
+  ]
+}

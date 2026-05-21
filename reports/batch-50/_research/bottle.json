@@ -1,0 +1,40 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "blow molding 압력·온도 산포로 두께 불균일·neck 변형. annealing(소성 풀림) 부적절 시 잔류 응력으로 균열 위험."},
+    {"category": "설비 요인", "details": "금형 마모로 mold seam 결함. 가마(furnace) 온도 편차로 stone(미용융 원료) 혼입."},
+    {"category": "재료 요인", "details": "원료 cullet(파유리) 이물 혼입으로 stone·bubble. 산화제·청정제 비율 부적절 시 색상 변동."},
+    {"category": "환경 요인", "details": "냉각 속도 부적절로 미세 균열(fine crack). 운반 중 충격으로 chip·crack."}
+  ],
+  "industry_standards": [
+    "ISO 7458 — 유리병 내압 시험",
+    "ASTM C148 — 내부 응력 측정",
+    "FDA 21 CFR Part 177 — 식품 접촉 용기",
+    "EN 14807 — 유리 용기 결함 측정",
+    "neck/rim 결함 기준: 돌출 0.2mm 이상, mould seam 0.5mm 이상 = 결함"
+  ],
+  "similar_cases": [
+    "MVTec AD bottle 카테고리: broken_large, broken_small, contamination 결함",
+    "Stone(미용융 원료 잔류) → 충전 후 균열 → 음료 회수 사례",
+    "Fine crack(미세 균열) → 충전 압력에 의한 파손 → 안전 사고",
+    "Cracked bottom — 충전·소비 안전 모두 위협"
+  ],
+  "best_practices": [
+    "100% 자동 비전 검사 — sidewall, neck, rim, base 각각",
+    "충전 전 진공 누설 시험 (압력 0.5~1.0 bar)",
+    "정기 internal stress 측정 (편광 분석)",
+    "rim seal 정합도 캘리퍼 측정 (밀봉 신뢰성)"
+  ],
+  "improvement_recommendations": [
+    "AOI에 multi-angle 카메라 도입 — 모든 면 검사",
+    "annealing 라인 온도 프로파일 SCADA 모니터링",
+    "원료 cullet 입고 검사 강화 (이물·색차)",
+    "포장 트레이 완충재 보강 — 운반 chip 방지"
+  ],
+  "_queries": ["glass bottle manufacturing defect inspection crack contamination neck rim standard"],
+  "_sources": [
+    "https://www.linkedin.com/pulse/glass-bottle-appearance-defects-inspection-standards-",
+    "https://www.richmondcontainers.com/b/glass-packaging-defects-and-how-to-identify-them",
+    "https://glassypack.com/index.php/2024/08/30/quality-control-in-glass-bottle-manufacturing-ensuring-consistency-and-durability/",
+    "https://www.glass-ts.com/news/7-types-of-glass-defects/"
+  ]
+}

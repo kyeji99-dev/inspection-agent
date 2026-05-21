@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "탈각(cracking) 공정의 압력 과다로 알맹이 손상 또는 외피 chip. 건조(roasting) 온도·시간 산포로 변색·균열."},
+    {"category": "설비 요인", "details": "탈각기 롤러 간격 불균일로 크기별 손상률 차이. 선별 컨베이어의 마찰로 외피 손상 누적."},
+    {"category": "재료 요인", "details": "수확 시 곰팡이 감염(Aspergillus flavus 등)으로 내부 변색·아플라톡신 위험. 미성숙 수확 또는 과숙으로 외피 결함."},
+    {"category": "환경 요인", "details": "저장 습도 부적절 시 곰팡이 번식 → 외피 검은 반점·내부 부패. 해충(insect) 침입으로 구멍·내부 손상."}
+  ],
+  "industry_standards": [
+    "USDA Hazelnut Grading Standard (1,000~3,000g 샘플)",
+    "Codex Alimentarius CXS 226 — 견과류 식품 표준",
+    "EU Regulation 2023/915 — 아플라톡신 최대 한계치",
+    "ISO 22000 — 식품 안전 관리 시스템",
+    "FDA 21 CFR 110 — 식품 공장 GMP"
+  ],
+  "similar_cases": [
+    "MVTec AD hazelnut 카테고리: crack, cut, hole, print 결함 수록",
+    "터키 헤이즐넛 수확량의 5~15%가 곰팡이·곤충 결함으로 등급 강등",
+    "Aspergillus flavus 감염 → 아플라톡신 B1 검출 → 전 로트 폐기 사례 다수"
+  ],
+  "best_practices": [
+    "수확 직후 24시간 내 건조 (수분 6% 이하)",
+    "AOI 비전 선별 라인 — 외피 색상·크기·결함 분류 (1000개/분)",
+    "샘플링 아플라톡신 HPLC 측정 (로트당 ≥3kg)",
+    "저장창고 온습도 자동 제어 (15°C, 65% RH 이하)"
+  ],
+  "improvement_recommendations": [
+    "비전 선별기에 딥러닝 기반 곰팡이 검출 모델 도입",
+    "수확 후 즉시 건조 처리 SOP 강화",
+    "저장 중 정기 샘플링 + 아플라톡신 신속 진단 키트",
+    "공급 농가 GAP(Good Agricultural Practice) 인증 의무화"
+  ],
+  "_queries": ["hazelnut food inspection defect crack mold contamination quality grading"],
+  "_sources": [
+    "https://ucfoodsafety.ucdavis.edu/sites/g/files/dgvnsk7366/files/inline-files/175649.pdf",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9175146/",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9014268/",
+    "https://wcngg.com/2025/05/09/what-your-grade-sheet-may-not-be-telling-you/"
+  ]
+}

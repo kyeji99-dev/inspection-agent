@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "tufting(스테이플링) 공정의 핀 정렬 불량으로 bristle 분포 불균일. 핸들 사출(injection) 압력 산포로 변형."},
+    {"category": "설비 요인", "details": "tufting 머신의 노즐 또는 픽업 핑거 마모. 절단(trimming) 칼날 마모로 bristle 길이 산포."},
+    {"category": "재료 요인", "details": "원사(filament) 강도·직경 산포로 bristle 강성 차이. 핸들 플라스틱 흐름성(MFI) 변동으로 사출 결함."},
+    {"category": "환경 요인", "details": "사용 중 압력·세제·온수 노출로 bristle 변형·변색 (제조 결함과 구별 필요)."}
+  ],
+  "industry_standards": [
+    "ISO 22254 — 칫솔 bristle 보유 강도",
+    "ISO 20126 — 수동 칫솔 일반 요구사항",
+    "ADA Seal of Acceptance — 미국 치과의사회 인증",
+    "FDA 21 CFR — 의료기기 일반 규제",
+    "ISO 2859-1 — AQL 샘플링"
+  ],
+  "similar_cases": [
+    "MVTec AD toothbrush 카테고리: defective 결함 종합 클래스 (anomaly detection 학습용)",
+    "Bristle 빠짐 → 흡입·삼킴 위험 → 어린이용 제품 리콜 사례",
+    "Tufting 핀 마모로 bristle 밀도 부족 → 클리닝 효율 ↓"
+  ],
+  "best_practices": [
+    "Tufting 후 자동 비전 검사 — bristle 밀도·정렬·색상",
+    "Bristle 보유 강도 시험 (ISO 22254, 15N 풀링)",
+    "핸들 사출 후 치수 측정 (캘리퍼) + 외관 검사",
+    "라인 속도 최대 1000개/분에 대응한 고속 AOI"
+  ],
+  "improvement_recommendations": [
+    "딥러닝 기반 bristle 결함 분류 (uneven tufting, bent bristle, foreign object)",
+    "Tufting 핀 교체 주기 단축 + 마모도 자동 측정",
+    "원사 강도 입고검사 강화",
+    "어린이용은 100% 검사 + 추가 안전 시험"
+  ],
+  "_queries": ["toothbrush manufacturing quality control defect inspection bristle"],
+  "_sources": [
+    "https://oralgos.co.uk/2026/03/06/toothbrush-manufacturing-quality-control/",
+    "https://www.sciencedirect.com/science/article/pii/S2212827123004110",
+    "https://switchon.io/ai-powered-tooth-brush-inspection/",
+    "https://www.cognex.com/industries/consumer-products/packaging/toothbrush-inspection"
+  ]
+}

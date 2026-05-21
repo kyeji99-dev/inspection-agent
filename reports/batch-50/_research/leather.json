@@ -1,0 +1,40 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "무두질(tanning) 공정의 화학약품 분산 불균일로 색차·반점. 다림질·표면 처리 공정의 압력 산포로 grain 패턴 손상."},
+    {"category": "설비 요인", "details": "tanning drum 회전 불균일로 처리 정도 차이. 표면 spraying 노즐 막힘으로 코팅 얼룩."},
+    {"category": "재료 요인", "details": "원피(hide)의 생장 흠집(scar, insect bite, wrinkle) 자연 결함. 같은 동물 부위별 두께·결 차이."},
+    {"category": "환경 요인", "details": "건조 환경 습도 부적절로 갈라짐. 저장 중 곰팡이·해충 침입으로 변색."}
+  ],
+  "industry_standards": [
+    "ISO 2859-1 (ANSI/ASQ Z1.4) — AQL 샘플링",
+    "ISO 17131 — 가죽 결함 용어",
+    "ISO 14931 — 가죽 등급 분류",
+    "D65 표준 광원 박스 — 색차 평가",
+    "BS 6453 — 가죽 표면 결함 측정"
+  ],
+  "similar_cases": [
+    "MVTec AD leather 카테고리: color, cut, fold, glue, poke 결함",
+    "1m 거리 검사 기준: 스크래치 5mm 이상 = Major, 10mm 이상 = Critical",
+    "Hole 3mm 이상 = Major defect (벨트·신발 산업 통용)",
+    "후가공 스크래치는 거친 가장자리 + 내부 lighter blue 색 노출이 특징"
+  ],
+  "best_practices": [
+    "D65 표준 광원 박스 + 색차계로 색 균일도 정량 평가",
+    "비전 검사 시스템으로 grain consistency 자동 분류",
+    "Tanning drum 시간·화학약품 SPC 관리",
+    "원피 입고 검사 — 등급별 분류 후 용도 매칭"
+  ],
+  "improvement_recommendations": [
+    "딥러닝 기반 표면 결함 자동 분류 시스템 도입",
+    "공급사별 결함률 정량 관리 + 상위 공급사 우대",
+    "후가공 표준 SOP 강화 (스크래치 방지)",
+    "고가 부위 발췌 패턴 최적화로 수율 ↑"
+  ],
+  "_queries": ["leather manufacturing defect inspection scratch hole color uniformity standard"],
+  "_sources": [
+    "https://hoplokleather.com/leather-belt-quality-control-defects-checklist/",
+    "https://cityexplorershoe.com/understanding-leather-defects-in-shoe-manufacturing-a-comprehensive-guide/",
+    "https://www.tradeaiders.com/leather-shoes-qc-setting-aql-standards-for-natural-leather-defects.html",
+    "https://encyclopedia.pub/entry/25880"
+  ]
+}

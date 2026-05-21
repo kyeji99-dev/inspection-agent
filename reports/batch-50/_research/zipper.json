@@ -1,0 +1,40 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "이빨(teeth) 사출 또는 부착 공정의 온도·압력 산포로 정렬 결함. 직물 테이프 짜기 공정에서 텐션 불균일로 폭 산포."},
+    {"category": "설비 요인", "details": "이빨 부착 다이 마모 또는 정렬 어긋남. 직조기의 셔틀 동작 불량으로 솔기 두께 차이."},
+    {"category": "재료 요인", "details": "원사·이빨 원재의 강도 산포. 코팅 도금 두께 불균일로 외관 차이. 슬라이더(pull) 도금 결함."},
+    {"category": "환경 요인", "details": "고온·고습 환경에서 직물 수축으로 이빨 간격 변화. 운반 중 마찰로 코팅 손상."}
+  ],
+  "industry_standards": [
+    "BS EN 16732:2015 — Zipper 일반 요구사항 (BS3084 대체)",
+    "ASTM D2061 — 지퍼 강도 시험",
+    "ASTM B117 — 부식 시험 (염수분무, 금속 이빨 도금)",
+    "ISO 22774 — 내구 사이클 시험",
+    "ISO 2859-1 — AQL 샘플링 (Critical/Major/Minor)",
+    "ASTM D3990-12 — 직물 결함 용어 표준"
+  ],
+  "similar_cases": [
+    "MVTec AD zipper 카테고리: broken_teeth, fabric_border, fabric_interior, split_teeth 등 다양한 결함",
+    "지퍼 이빨 1개 누락으로 의류 전체 회수 사례 (브랜드 평판 손실)",
+    "직물 테이프 폭 산포로 부착 공정 불량 → 전수검사로 전환된 사례"
+  ],
+  "best_practices": [
+    "지퍼 라인 전수검사 (4-point system 적용)",
+    "이빨 부착 후 AOI 비전 검사 (이빨 개수 + 정렬)",
+    "기능 시험(슬라이더 왕복 100회) 샘플링",
+    "출하 전 텐션 균일도 측정"
+  ],
+  "improvement_recommendations": [
+    "이빨 결손 자동 카운팅 비전 시스템 도입",
+    "직조기 텐션 센서 실시간 모니터링",
+    "공급사 원사 입고 시 강도·균일도 인증서 확인",
+    "고객 클레임 데이터 기반 결함 우선순위 재정의"
+  ],
+  "_queries": ["zipper textile manufacturing defect inspection ISO standard"],
+  "_sources": [
+    "https://www.slikzips.com/testing-standards",
+    "https://tetrainspection.com/textile-garment-inspection/",
+    "https://webstore.ansi.org/standards/astm/astmd206103",
+    "https://lenzip.com/how-to-read-zipper-spec-sheets/"
+  ]
+}

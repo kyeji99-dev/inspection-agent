@@ -1,0 +1,39 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "원목 절단·가공 시 옹이(knot) 위치 미고려 → 등급 강등. 건조(seasoning) 속도 부적절로 split(분리)·warping(휨)."},
+    {"category": "설비 요인", "details": "절단 톱 마모로 표면 거칠기 증가. 건조 챔버 온도·습도 편차로 균열 위험."},
+    {"category": "재료 요인", "details": "수종·생장 환경에 따라 옹이·수지(resin)·marrow(수심) 자연 결함 발생. blue stain(곰팡이성 청변)은 베어낸 직후 관리 부실."},
+    {"category": "환경 요인", "details": "저장 중 곰팡이·곤충 침입으로 stain·hole. 습도 변화로 후속 균열 진행."}
+  ],
+  "industry_standards": [
+    "NHLA Rules — North American Hardwood Lumber Association 등급",
+    "EN 942 — 유럽 활엽수 등급",
+    "ISO 4474 — 목재 결함 용어",
+    "JAS 산림청 — 한국 목재 등급",
+    "Clear / Select / Common / 1F 등 등급별 결함 허용 기준"
+  ],
+  "similar_cases": [
+    "MVTec AD wood 카테고리: color, combined, hole, liquid, scratch 결함 수록",
+    "Sticker stain (회색 줄무늬) — 건조 중 가로목 접촉 부위 자연 발생, Common 등급 이하만 허용",
+    "Dead knot loose — 등급 외 폐기 사유 1순위"
+  ],
+  "best_practices": [
+    "라인 비전 검사 — knot/crack/scratch/coating/delamination 자동 분류",
+    "건조 챔버 온습도 SCADA 모니터링",
+    "베어낸 즉시 항균 처리 (blue stain 예방)",
+    "고해상도 CCD + 딥러닝으로 결함 위치·면적 자동 산출"
+  ],
+  "improvement_recommendations": [
+    "딥러닝 기반 등급 자동 판정 시스템 도입 (Live/Dead knot 구분)",
+    "건조 공정 SOP 표준화 (수종별 프로파일)",
+    "재고 회전율 관리 + FIFO 강화",
+    "공급사 원목 입고 시 결함률 인증서 수령"
+  ],
+  "_queries": ["wood surface defect inspection knot crack stain industrial grading"],
+  "_sources": [
+    "https://www.lordfloor.com/oak-wood-grading/",
+    "https://bioresources.cnr.ncsu.edu/resources/review-of-the-current-state-of-application-of-wood-defect-recognition-technology/",
+    "https://www.vision-systems.com/factory/manufacturing/article/14291200/inspecting-surface-defects-in-wood-paneling-and-siding",
+    "https://www.cypressinfo.org/wp-content/uploads/2023/03/NHLA-Cypress-Grades.pdf"
+  ]
+}

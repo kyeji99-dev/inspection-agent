@@ -1,0 +1,40 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "직조(weaving) 공정의 텐션 불균일로 mesh 간격 산포. expanded metal 가공의 펀치 압력 변동으로 형상 불균일."},
+    {"category": "설비 요인", "details": "직조기 셔틀 마모로 broken wire(끊긴 와이어), nested weft. 펀치 다이 마모로 모서리 burr."},
+    {"category": "재료 요인", "details": "원선재(wire)의 인장강도·직경 산포로 weaving 중 절단. 표면 산화로 도금 부착성 ↓."},
+    {"category": "환경 요인", "details": "고온·고습으로 도금층 산화. 운반·취급 시 외력으로 형상 변형."}
+  ],
+  "industry_standards": [
+    "GB/T 5330-2003 — 산업용 와이어 직조 메쉬 일반 사양",
+    "ASTM E2016 — 스테인리스 와이어 메쉬 기술 요구",
+    "ASME B30.9 — 메탈 메쉬 슬링 검사 (단 1개 끊긴 와이어도 폐기)",
+    "ISO 4783 — 와이어 직경 측정 표준",
+    "ISO 9001 — 품질 경영"
+  ],
+  "similar_cases": [
+    "MVTec AD grid 카테고리: bent, broken, glue, metal_contamination, thread 결함",
+    "Single broken wire 허용 vs 폐기 기준 — 용도(필터/리프팅)에 따라 차등",
+    "Point-like oil stain — 직조 중 윤활제 잔류, 세척 공정에서 제거",
+    "Wavy edge — 약간은 허용 but 심한 경우 reject"
+  ],
+  "best_practices": [
+    "확대경 또는 비전 시스템으로 broken wire 검출",
+    "Mesh opening 정량 측정 (image analysis)",
+    "기능 시험 — 필터링 효율 또는 인장 강도",
+    "공급사 원선재 입고검사 (직경 ±2%)"
+  ],
+  "improvement_recommendations": [
+    "Accupore 같은 mesh 분석 시스템 도입 (large/small opening, broken wire 자동 검출)",
+    "직조기 텐션 센서 + 자동 알람",
+    "원선재 공급사별 결함률 데이터화 + 상위 우대",
+    "용도별 합부 기준 SOP 명문화 (필터/리프팅/장식)"
+  ],
+  "_queries": ["metal mesh grid inspection defect weave broken wire industrial standard"],
+  "_sources": [
+    "https://www.wiremesh-chinafree.com/news/639.html",
+    "https://www.meshfromchina.com/how-to-inspect-stainless-steel-wire-mesh/",
+    "https://dwt-inc.com/accupore-mesh-analysis-inspection-services/",
+    "https://www.mazzellacompanies.com/learning-center/how-to-inspect-metal-mesh-slings-asme-b30-9/"
+  ]
+}

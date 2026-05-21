@@ -1,0 +1,42 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "나사산 절삭(rolling/cutting)의 다이 마모로 thread 손상·burr 발생. 머리 성형(heading) 압력 부족 시 균열."},
+    {"category": "설비 요인", "details": "전조 다이 정밀도 저하로 나사산 깊이·각도 산포. 도금조 농도·온도 변동으로 코팅 두께 불균일."},
+    {"category": "재료 요인", "details": "강재 carbon 함량·인장강도 산포로 머리 균열 또는 비틀림 강도 부족. 도금 박리(peeling)는 표면 산화 잔류 시 발생."},
+    {"category": "환경 요인", "details": "운반 중 모서리 충돌로 머리부 dent. 저장 습도 부적절 시 도금층 변색·녹."}
+  ],
+  "industry_standards": [
+    "ISO 898-1 — 볼트·스크류 기계적 성질",
+    "ISO 965-1 — 일반 나사 공차",
+    "ISO 10683 — 비전해 도금",
+    "ISO 4042:2022 — 패스너 전해 도금 (최신 개정)",
+    "ASTM F606 — 패스너 시험 방법",
+    "ASME B18.2.1 — 볼트·스크류 치수 요구",
+    "ASTM B117 / ISO 9227 — 염수분무시험 (도금 내식성)"
+  ],
+  "similar_cases": [
+    "MVTec AD screw 카테고리: manipulated_front, scratch_head, scratch_neck, thread_side, thread_top 결함",
+    "나사산 burr → 결합 시 풀림 토크 부족 → 자동차 리콜 사례",
+    "도금 박리 → 사용 중 부식 → 구조 안전 위협",
+    "수소취화(hydrogen embrittlement) — 전해도금 후 베이킹 누락 시 발생"
+  ],
+  "best_practices": [
+    "AI 비전 검사 — 99.9% 정확도로 thread/head 결함 자동 분류",
+    "ISO 9227 염수분무시험 정기 샘플링 (48~168시간)",
+    "전조 다이 마모도 정기 측정 + SPC 관리",
+    "도금 후 베이킹 처리로 수소취화 예방"
+  ],
+  "improvement_recommendations": [
+    "AOI에 딥러닝 결함 분류기 도입 (thread damage, burr, dent)",
+    "도금조 자동 농도 제어 + 두께 인라인 측정",
+    "고강도 등급(8.8 이상)은 100% 토크 시험",
+    "공급사 원재 입고 시 인증서 + 샘플 분석 의무화"
+  ],
+  "_queries": ["screw fastener manufacturing defect inspection thread bend coating standard"],
+  "_sources": [
+    "https://www.cnclathing.com/guide/threaded-fastener-types-manufacturing-inspection-standards-iso-astm-ansi",
+    "https://www.wanhong-fastener.com/screw-quality-inspection-whole-process-guide/",
+    "https://switchon.io/ai-powered-fastener-inspection/",
+    "https://finishingandcoating.com/index.php/plating/1203-iso-4042-2022-updates-fastener-electroplating-standard"
+  ]
+}

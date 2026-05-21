@@ -1,0 +1,330 @@
+[
+  {
+    "slug": "div_000_idx0000",
+    "category": "transistor",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_001_idx0132",
+    "category": "transistor",
+    "has_defect": true,
+    "defect_type": "리드 굽힘 (중앙)",
+    "severity": "HIGH",
+    "status": "OK"
+  },
+  {
+    "slug": "div_002_idx0264",
+    "category": "metal_nut",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_003_idx0396",
+    "category": "metal_nut",
+    "has_defect": true,
+    "defect_type": "표면 손상/얼룩",
+    "severity": "MEDIUM",
+    "status": "OK"
+  },
+  {
+    "slug": "div_004_idx0529",
+    "category": "pill",
+    "has_defect": true,
+    "defect_type": "표면 반점 (contamination)",
+    "severity": "MEDIUM",
+    "status": "OK"
+  },
+  {
+    "slug": "div_005_idx0661",
+    "category": "pill",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_006_idx0793",
+    "category": "pill",
+    "has_defect": true,
+    "defect_type": "표면 반점",
+    "severity": "MEDIUM",
+    "status": "OK"
+  },
+  {
+    "slug": "div_007_idx0925",
+    "category": "pill",
+    "has_defect": true,
+    "defect_type": "인쇄 결함 (글자)",
+    "severity": "HIGH",
+    "status": "OK"
+  },
+  {
+    "slug": "div_008_idx1058",
+    "category": "zipper",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_009_idx1190",
+    "category": "zipper",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_010_idx1322",
+    "category": "zipper",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_011_idx1454",
+    "category": "zipper",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_012_idx1587",
+    "category": "tile",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_013_idx1719",
+    "category": "tile",
+    "has_defect": true,
+    "defect_type": "어두운 패치 (얼룩/오일)",
+    "severity": "MEDIUM",
+    "status": "OK"
+  },
+  {
+    "slug": "div_014_idx1851",
+    "category": "hazelnut",
+    "has_defect": true,
+    "defect_type": "외피 갈색 패치 (곰팡이/탄화 의심)",
+    "severity": "MEDIUM",
+    "status": "OK"
+  },
+  {
+    "slug": "div_015_idx1983",
+    "category": "hazelnut",
+    "has_defect": true,
+    "defect_type": "상단 외피 변색",
+    "severity": "LOW",
+    "status": "OK"
+  },
+  {
+    "slug": "div_016_idx2116",
+    "category": "hazelnut",
+    "has_defect": true,
+    "defect_type": "외피 chip / 박리",
+    "severity": "MEDIUM",
+    "status": "OK"
+  },
+  {
+    "slug": "div_017_idx2248",
+    "category": "hazelnut",
+    "has_defect": true,
+    "defect_type": "외피 결정성 얼룩",
+    "severity": "LOW",
+    "status": "OK"
+  },
+  {
+    "slug": "div_018_idx2380",
+    "category": "wood",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_019_idx2512",
+    "category": "carpet",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_020_idx2645",
+    "category": "carpet",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_021_idx2777",
+    "category": "carpet",
+    "has_defect": true,
+    "defect_type": "검은 실 / cut",
+    "severity": "HIGH",
+    "status": "OK"
+  },
+  {
+    "slug": "div_022_idx2909",
+    "category": "misc",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_023_idx3041",
+    "category": "misc",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_024_idx3174",
+    "category": "leather",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_025_idx3306",
+    "category": "leather",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_026_idx3438",
+    "category": "wood",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_027_idx3571",
+    "category": "leather",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_028_idx3703",
+    "category": "screw",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_029_idx3835",
+    "category": "screw",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_030_idx3967",
+    "category": "screw",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_031_idx4100",
+    "category": "screw",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_032_idx4232",
+    "category": "toothbrush",
+    "has_defect": true,
+    "defect_type": "심한 오염 / 사용흔 (bristle)",
+    "severity": "HIGH",
+    "status": "OK"
+  },
+  {
+    "slug": "div_033_idx4364",
+    "category": "bottle",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_034_idx4496",
+    "category": "bottle",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_035_idx4629",
+    "category": "grid",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_036_idx4761",
+    "category": "grid",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_037_idx4893",
+    "category": "grid",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_038_idx5025",
+    "category": "capsule",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_039_idx5158",
+    "category": "capsule",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  },
+  {
+    "slug": "div_040_idx5290",
+    "category": "capsule",
+    "has_defect": false,
+    "defect_type": "",
+    "severity": "NONE",
+    "status": "OK"
+  }
+]

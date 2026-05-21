@@ -1,0 +1,36 @@
+{
+  "root_cause_analysis": [
+    {"category": "공정 요인", "details": "비정형 제품(handcrafted decorative/food items)은 수작업 공정의 사람 의존도가 높아 결함률 산포 큼."},
+    {"category": "설비 요인", "details": "성형·코팅 도구 마모도가 결과물 표면 품질에 직결. 자동화 도입 여지 큼."},
+    {"category": "재료 요인", "details": "천연 재료(견과·돌·수공예 원료)는 원재 특성 자체에 큰 산포. 입고검사 강화 필요."},
+    {"category": "환경 요인", "details": "저장·운반 중 외력·습도로 표면 손상. 디스플레이용 제품은 광노출 변색도 고려."}
+  ],
+  "industry_standards": [
+    "ISO 2859-1 — AQL 일반 샘플링 (Critical/Major/Minor)",
+    "ISO 9001 — 일반 품질 경영",
+    "AQL 1.5 (Major) / 4.0 (Minor) — 소매 디스플레이용 표준 적용 케이스",
+    "ASTM E2210 — 일반 외관 검사 가이드라인"
+  ],
+  "similar_cases": [
+    "비정형 산업 제품(공예·식품 데코)은 표준 비전 데이터셋 부족 → 커스텀 학습 필요",
+    "MVTec AD에 없는 카테고리는 transfer learning으로 base 모델 활용",
+    "Non-standard 제품은 결함 정의 자체가 주관적 → 검사 SOP 수립 우선"
+  ],
+  "best_practices": [
+    "결함 정의 SOP 명문화 → 검사관 간 합의",
+    "샘플 이미지 라이브러리 구축 (good/defect 50장 이상)",
+    "Pre-trained 모델(예: ImageNet) 기반 transfer learning",
+    "고객 클레임 데이터 기반 결함 우선순위 재정의"
+  ],
+  "improvement_recommendations": [
+    "맞춤형 데이터 수집 + 라벨링 (정상/결함 각 100장)",
+    "프로토타입 ML 모델 구축 (transfer learning)",
+    "검사관 교육 + 표준 견본 비치",
+    "결함률 데이터 축적 후 SPC 도입"
+  ],
+  "_queries": ["general manufacturing defect inspection visual quality control standard"],
+  "_sources": [
+    "https://www.mvtec.com/company/research/datasets/mvtec-ad",
+    "https://www.softwebsolutions.com/surface-defect-detection/"
+  ]
+}
